@@ -1,0 +1,1000 @@
+ 16  cd ..
+   17  ls -latr
+   18  rm -f curso-itnow.pem
+   19  mv /tmp/curso-ansible-verano.pem .
+   20  chmod 0600 curso-ansible-verano.pem
+   21  git clone http://gitlab.teradisk.net/trainings/curso-ansible-verano.git
+   22  rm -rf ansible-devops/
+   23  ll -tr
+   24  cd ..
+   25  cd
+   26  cd curso-ansible-verano
+   27  vi env_vars/aws_vault.yml
+   28  ll
+   29  pwd
+   30  ll
+   31  pwd
+   32  cd /home/centos/
+   33  ll
+   34  cd curso-ansible-devops-diciembre/
+   35  ll
+   36  vi env_vars/aws_vault.yml
+   37  cp env_vars/aws_vault.yml /tmp/
+   38  vi env_vars/aws_vault.yml
+   39  ansible-playbook crear-lab1vm.yml
+   40  ll
+   41  cd env_vars/aws_vault.yml
+   42  ll
+   43  vi env_vars/aws_vault.yml
+   44  ansible-playbook crear-lab1vm.yml
+   45  cat env_vars/aws_vault.yml
+   46  ll
+   47  pwd
+   48  cd /home/centos/
+   49  ll
+   50  cd curso-ansible-devops-diciembre/
+   51  git pull
+   52  ll
+   53  vi env_vars/aws_vault.yml
+   54  ansible-playbook crear-lab1vm.yml
+   55  l
+   56  ll
+   57  cd ..
+   58  ll
+   59  cd curso-ansible-devops-diciembre/
+   60  ll
+   61  cat inventories/laboratorio.txt
+   62  ssh -i ../curso-itnow.pem centos@52.214.188.45
+   63  ll
+   64  ansible-playbook borrar-labs1vm.yml
+   65  ansible-playbook crear-lab3vm.yml
+   66  cat inventories/laboratorio.txt
+   67  ansible-playbook borrar-labs3vm.yml
+   68  pwd
+   69  cd /root/
+   70  ll
+   71  rm -rf curso-ansible-verano
+   72  rm curso-ansible-verano.pem
+   73  cd /home/centos/
+   74  ll
+   75  rm curso-ansible-diciembre.ppk
+   76  ll
+   77  pqd
+   78  pwd
+   79  ll
+   80  cd curso-ansible-devops-diciembre/
+   81  ll
+   82  ansible-playbook borrar-labs3vm.yml
+   83  history
+   84  clear
+   85  ll
+   86  git pull
+   87  cat Dockerfile
+   88  clear
+   89  ll
+   90  ansible-playbook crear-lab3vm.yml
+   91  cat inventories/laboratorio.txt
+   92  ssh -i ../curso-itnow.pem centos@52.209.133.254
+   93  ip r s
+   94  history
+   95  ll
+   96  cd /home/centos/
+   97  ll
+   98  cd curso-ansible-devops-diciembre/
+   99  ll
+  100  cd env_vars/
+  101  ll
+  102  cat traineeid.yml
+  103  > traineeid.yml
+  104  mv traineeid.yml /tmp/
+  105  cd ../
+  106  ll
+  107  cat inventories/laboratorio.txt
+  108  > inventories/laboratorio.txt
+  109  exit
+  110  history
+  111  init 0
+  112  docker ps -a
+  113  yum install https://packages.chef.io/files/stable/chefdk/2.5.3/el/7/chefdk-2.5.3-1.el7.x86_64.rpm
+  114  chef gem install kitchen-docker
+  115  chef gem install kitchen-ansible
+  116  inspec --version
+  117  kitchen --version
+  118  ll
+  119  ansible-playbook crear-lab1vm.yml
+  120  ll
+  121  ll
+  122  mv /tmp/aws_vault.yml env_vars/
+  123  ansible-playbook crear-lab1vm.yml
+  124  ll
+  125  vi inspec_local.rb
+  126  inspec exec inspec_local.rb
+  127  cat inventories/laboratorio.txt
+  128  ll
+  129  vi inspec_local.rb
+  130  inspec exec inspec_local.rb -t ssh://centos@54.171.66.173
+  131  inspec exec inspec_local.rb -t ssh://centos@54.171.66.173 -i /home/centos/curso-itnow.pem
+  132  vi test_vim.rb
+  133  inspec exec test_vim.rb -t ssh://centos@54.171.66.173 -i /home/centos/curso-itnow.pem
+  134  ssh -i /home/centos/curso-itnow.pem centos@34.241.63.101 "sudo yum -y install vim"
+  135  ssh -i /home/centos/curso-itnow.pem centos@54.171.66.173 "sudo yum -y install vim"
+  136  inspec exec test_vim.rb -t ssh://centos@54.171.66.173 -i /home/centos/curso-itnow.pem
+  137  ll
+  138  vi dia2_lab5_tdd.yml
+  139  ll
+  140  mv d2l3_configurar_env.yml dia2_lab5_tdd.yml
+  141  vi dia2_lab5_tdd
+  142  chowh centos:centos lab-jenkins-devops/
+  143  chown centos:centos lab-jenkins-devops/
+  144  ll
+  145  chmod 775 lab-jenkins-devops/
+  146  ll
+  147  chmod -R 775 lab-jenkins-devops/
+  148  chown centos:centos lab-jenkins-devops/
+  149  ll
+  150  ll
+  151  cd lab-jenkins-devops/
+  152  ll
+  153  ansible-playbook crear-jenkins-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  154  ll
+  155  cd ..
+  156  ll
+  157  cd ..
+  158  ll
+  159  cp curso-itnow.pem /root/
+  160  cd curso-ansible-devops-diciembre/
+  161  ll
+  162  cd lab-jenkins-devops/
+  163  ansible-playbook crear-jenkins-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  164  ll
+  165  vi env_vars/
+  166  ll
+  167  cd env_vars/
+  168  ll
+  169  cat aws_vault.yml
+  170  ll
+  171  cd ..
+  172  ll
+  173  cd ..
+  174  ll
+  175  cd env_vars/
+  176  ll
+  177  cd ..
+  178  ll
+  179  cd env_vars/
+  180  ll
+  181  cd ..
+  182  oll
+  183  ll
+  184  cp -fR env_vars/* lab-jenkins-devops/env_vars/
+  185  cd lab-jenkins-devops/
+  186  ansible-playbook crear-jenkins-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  187  ssh-keygen -t rsa
+  188  ssh-keygen -t rsa
+  189  ssh-keygen -t rsa
+  190  ll
+  191  cd /tmp/
+  192  ll
+  193  cd -
+  194  ll
+  195  cd /tmp/
+  196  ll
+  197  cat keyjenkinsgit.pub
+  198  cd -
+  199  ll
+  200  pwd
+  201  cd ..
+  202  ll
+  203  cd lab-jenkins-devops/
+  204  ll
+  205  ansible-galaxy install geerlingguy.gitlab
+  206  ansible-galaxy install geerlingguy.gitlab
+  207  ansible-playbook crear-gitlab.yml -e "NOMBRE_ALUMNO=Raul"
+  208  ll
+  209  ll
+  210  cd ..
+  211  ll
+  212  ll
+  213  cat /tmp/keyjenkinsgit
+  214  cat /tmp/keyjenkinsgit.pub
+  215  git clone https://gitlab.teradisk.net/trainings/apache-webpage.git
+  216  ll
+  217  git clone https://gitlab.teradisk.net/trainings/apache-webpage.git
+  218  cd apache-webpage
+  219  ll
+  220  cat Jenkinsfile
+  221  ll
+  222  cat /tmp/keyjenkinsgit
+  223  cat /tmp/keyjenkinsgit
+  224   ll
+  225  cd ..
+  226  ll
+  227  ll
+  228  cd env_vars
+  229  ll
+  230  mv aws_vault.yml /tmp/
+  231  ll
+  232  updatedb
+  233  locate aws_vault
+  234  mv /home/centos/curso-ansible-devops-diciembre/lab-jenkins-devops/env_vars/aws_vault.yml /tmp
+  235  mv /home/centos/curso-ansible-devops-diciembre/lab-jenkins-devops/env_vars/aws_vault.yml /tmp/awsvault2.yml
+  236  updatedb
+  237  ll
+  238  ll
+  239  cd ..
+  240  l
+  241  ll
+  242  ll
+  243  cd repotest/
+  244  ll
+  245  git init .
+  246  git status
+  247  git add *
+  248  git clone https://github.com/axlraul/ansible-3
+  249  ll
+  250  cd ..
+  251  ll
+  252  cp -Rp repotest/ansible-3/
+  253  ll
+  254  cd repotest/
+  255  ll
+  256  cd ansible-3/
+  257  ll
+  258  cd ..
+  259  cd ..
+  260  cp -Rp * repotest/ansible-3/
+  261  cd ..
+  262  ll
+  263  git status
+  264  git status
+  265  ll
+  266  cd curso-ansible-devops-diciembre/
+  267  cd ansible-3
+  268  ll
+  269  cd ansible-3
+  270  ll
+  271  pwd
+  272  cd repotest/ansible-3/
+  273  ll
+  274  git init .
+  275  git remote add origin https://github.com/axlraul/ansible-3
+  276  git status
+  277  git add *
+  278  git commit -m "commit inicial dia 3"
+  279  git push -u origin master
+  280  ll
+  281  ansible-playbook borrar-labs1vm.yml
+  282  ll
+  283  cd env_vars/
+  284  ll
+  285  cp -p /tmp/aws_vault.yml .
+  286  ll
+  287  cd ..
+  288  ll
+  289  ansible-playbook borrar-labs1vm.yml
+  290  ll
+  291  ll
+  292  cp -p repotest/borrar-labs1vm.yml borrar-labs1vm.yml
+  293  cp -p repotest/crear-lab1vm.yml crear-lab1vm.yml
+  294  yum install apache
+  295  yum list | grep -i apache
+  296  ll
+  297  vi dia2_lab5_tdd.yu
+  298  vi dia2_lab5_tdd.yum
+  299  vi dia2_lab5_tdd.yml
+  300  yum install httpd
+  301  ll
+  302  locate httpd
+  303  yum install locate
+  304  yum install located
+  305  yum list locate
+  306  yum list | grep -i locate
+  307  yum install mlocate
+  308  yum update
+  309  updatedb
+  310  ll
+  311  locate httpd
+  312  locate httpd | grep -i conf
+  313  cat /etc/httpd/conf/httpd.conf
+  314  /etc/httpd/conf/httpd.conf.
+  315  cp /etc/httpd/conf/httpd.conf templates/httpd.conf.j2
+  316  ll
+  317  cd templates/
+  318  ll
+  319  vi httpd.conf.j2
+  320  ll
+  321  ll
+  322  mkdir test
+  323  cd test/
+  324  mkdir integration
+  325  cd integration/
+  326  ll
+  327  ll
+  328  cd ..
+  329  lcd cd ..
+  330  ll
+  331  cd ..
+  332  ll
+  333  mv -R test/ /home/centos/curso-ansible-devops-diciembre/roles/
+  334  mv test/ /home/centos/curso-ansible-devops-diciembre/roles/
+  335  ll
+  336  cd ..
+  337  ll
+  338  cd roles/
+  339  ll
+  340  ll
+  341  cd nginx/
+  342  ll
+  343  cd ..
+  344  mv test/ nginx/
+  345  ll
+  346  cd nginx/
+  347  ll
+  348  vi .kitchen.yml
+  349  ll
+  350  kitchen list
+  351  ll
+  352  cd test/
+  353  ll
+  354  cd integration/
+  355  ll
+  356  mkdir nginx
+  357  cd nginx/
+  358  ll
+  359  vi nginx-tests.rb
+  360  vi nginx-tests.rb
+  361  ll
+  362  pwd
+  363  cd ..
+  364  ll
+  365  pwd
+  366  vi test-nginx.yml
+  367  vi .kitchen.yml
+  368  ll
+  369  cd ..
+  370  ll
+  371  cd ..
+  372  ll
+  373  vi .kitchen.yml
+  374  kitchen destroy
+  375  kitchen create
+  376  kitchen converge
+  377  kitchen verify
+  378  yum install tree
+  379  ll
+  380  cd ..
+  381  ll
+  382  tree
+  383  ll
+  384  ll
+  385  ll
+  386  ll
+  387  ll
+  388  cd ..
+  389  ll
+  390  cd roles/
+  391  ll
+  392  ll
+  393  ll
+  394  cd ..
+  395  ll
+  396  cd roles/
+  397  ll
+  398  ls -la
+  399  cd ..
+  400  ll
+  401  cd roles/
+  402  ll
+  403  mkdir httpd
+  404  cd httpd/
+  405  ll
+  406  vi .kitchen.yml
+  407  vi .kitchen.yml
+  408  ll
+  409  ll
+  410  cd ..
+  411  ll
+  412  cd httpd/
+  413  ll
+  414  mkdir test
+  415  cd test/
+  416  mkdir integration
+  417  cd integration/
+  418  mkdir httpd
+  419  cd httpd/
+  420  ll
+  421  kitchen list
+  422  ll
+  423  cd ..
+  424  ll
+  425  cd httpd/
+  426  ll
+  427  ls -la
+  428  cd ..
+  429  ll
+  430  cd ..
+  431  ll
+  432  cd .
+  433  ll
+  434  cd ..
+  435  ll
+  436  ls -la
+  437  mv .kitchen.ymlll
+  438  ll
+  439  cat .kitchen.yml
+  440  q!
+  441  vi httpd-tests.rb
+  442  ll
+  443  pwd
+  444  mv httpd-tests.rb test/integration/httpd/
+  445  ll
+  446  vi test-nginx.yml
+  447  tree
+  448  ll
+  449  cd ..
+  450  ll
+  451  mv httpd/ httpd2
+  452  ansible-galaxy init httpd
+  453  ll
+  454  tree
+  455  mv httpd2/test/* httpd/tests/
+  456  ll
+  457  ll
+  458  cd httpd2
+  459  ls -la
+  460  cd ..
+  461  ll
+  462  mv httpd2/.kitchen.yml httpd
+  463  mv httpd2/test-nginx.yml httpd
+  464  ll
+  465  cd httpd
+  466  cd ngi
+  467  cd ..
+  468  ll
+  469  cd nginx/
+  470  kitchen destroy
+  471  ll
+  472  cd ..l
+  473  cd ..
+  474  ll
+  475  cd httpd
+  476  ll
+  477  kitchen create
+  478  kitchen list
+  479  kitchen converge
+  480  ll
+  481  cd tests/
+  482  ll
+  483  ññ
+  484  ll
+  485  cd integration/
+  486  ll
+  487  cd httpd/
+  488  ll
+  489  cd ..
+  490  ll
+  491  cd ..
+  492  cd ..
+  493  ll
+  494  vi .kitchen.yml
+  495  kitchen converge
+  496  ll
+  497  cd test
+  498  cat tests/integration/test-httpd.yml
+  499  ll
+  500  cd tests/
+  501  ll
+  502  cd integration/
+  503  ll
+  504  cd httpd/
+  505  ll
+  506  ll
+  507  ll
+  508  ll
+  509  ll
+  510  cd ..
+  511  ll
+  512  cd ..
+  513  l
+  514  ll
+  515  cd ..
+  516  ll
+  517  cp -Rp tests/ test
+  518  kitchen converge
+  519  cd ..
+  520  cd httpd
+  521  ll
+  522  vi .kitchen.yml
+  523  cd test/integration/httpd/
+  524  ll
+  525  ll
+  526  cd ..
+  527  ll
+  528  ll
+  529  cd  ..
+  530  c d..
+  531  ll
+  532  cd ..
+  533  ll
+  534  cd ..
+  535  cd httpd
+  536  ll
+  537  ls -la
+  538  cp -p test-nginx.yml test-nginx.yml
+  539  kitchen list
+  540  cd ..
+  541  ll
+  542  cd httpd
+  543  ll
+  544  cd test
+  545  ll
+  546  cd integration/
+  547  ll
+  548  cd httpd/
+  549  ls -la
+  550  pwd
+  551  vi httpd-tests.rb
+  552  ll
+  553  ls -la
+  554  cd ..
+  555  ll
+  556  cd ..
+  557  ll
+  558  cd ..
+  559  ll
+  560  ls -la
+  561  cat .kitchen.yml
+  562  cat test/integration/test-httpd.yml
+  563  cd test/integration/
+  564  ll
+  565  ls -la
+  566  cd httpd/
+  567  ll
+  568  cd ..
+  569  cp httpd/httpd-tests.rb .
+  570  ll
+  571  cd ..
+  572  ll
+  573  cd h
+  574  cd ..
+  575  ll
+  576  pwd
+  577  cat .kitchen.yml
+  578  kitchen list
+  579  ll
+  580  ll
+  581  cd ..
+  582  ll
+  583  cd nginx/
+  584  ll
+  585  cd tasks/
+  586  ll
+  587  cat main.yml
+  588  cd ..
+  589  ll
+  590  cd ..l
+  591  cd..
+  592  cd ..
+  593  ll
+  594  cd httpd
+  595  ll
+  596  cd tasks/
+  597  vi main.yml
+  598  cd ..
+  599  ll
+  600  kitchen create
+  601  kitchen destroy
+  602  kitchen create
+  603  kitchen list
+  604  kitchen converge
+  605  ll
+  606  cat test/integration/test-httpd.yml
+  607  tree
+  608  ll
+  609  mv test-nginx.yml test/integration/test-httpd.yml
+  610  vi test/integration/test-httpd.yml
+  611  kitchen destroy
+  612  kitchen create
+  613  kitchen converge
+  614  vi /tmp/kitchen/httpd/tasks/main.yml
+  615  ll
+  616  cd tasks/
+  617  ll
+  618  vi main.yml
+  619  kitchen destroy
+  620  cd ..
+  621  ll
+  622  kitchen destroy
+  623  kitchen create
+  624  kitchen converge
+  625  kitchen verify
+  626  ll
+  627  vi tasks/
+  628  ll
+  629  cd test
+  630  ll
+  631  cd integration/
+  632  ll
+  633  vi test-httpd.yml
+  634  cat httpd-tests.rb
+  635  ll
+  636  vi httpd-tests.rb
+  637   cd /etc/httpd/
+  638  ll
+  639  cd conf
+  640  ll
+  641  pwd
+  642  cd /home/centos/curso-ansible-devops-diciembre/
+  643  cd /home/centos/curso-ansible-devops-diciembre/roles/httpd/
+  644  ll
+  645  ll
+  646  cd test
+  647  cd integration/
+  648  ll
+  649  vi httpd-tests.rb
+  650  vi httpd-tests.rb
+  651  cat /etc/httpd/conf/httpd.conf
+  652  ll
+  653  cd ..
+  654  l
+  655  cd ..
+  656  ll
+  657  pwd
+  658  kitchen list
+  659  kitchen verify
+  660  kitchen converge
+  661  kitchen verify
+  662  kitchen destroy
+  663  kitchen create
+  664  kitchen converge
+  665  kitchen verify
+  666  ll
+  667  cd test
+  668  ll
+  669  vi test.yml
+  670  ll
+  671  cd integration/
+  672  ll
+  673  cat httpd-tests.rb
+  674  ññ
+  675  ll
+  676  vi httpd-tests.rb
+  677  kitchen create
+  678  cd ..
+  679  ll
+  680  cd ..
+  681  ll
+  682  kitchen create
+  683  kitchen converge
+  684  kitchen verify
+  685  ll
+  686  updatedb
+  687  ll
+  688  cd ..
+  689  ll
+  690  rm -Rf httpd2
+  691  ll
+  692  cd httpd/
+  693  ll
+  694  ll
+  695  locate .rb | grep -i httpd
+  696  ll
+  697  cd test
+  698  ll
+  699  cd integration/
+  700  ll
+  701  cd httpd
+  702  ll
+  703  cat httpd-tests.rb
+  704  ll
+  705  rm httpd-tests.rb
+  706  ll
+  707  ll
+  708  cd ..
+  709  ll
+  710  mv httpd-tests.rb httpd
+  711  kitchen converg
+  712  kitchen converge
+  713  cd ..
+  714  ll
+  715  cd ..
+  716  ll
+  717  kitchen converg
+  718  kitchen converge
+  719  kitchen verify
+  720  ll
+  721  cd test
+  722  ll
+  723  cd integration/
+  724  ll
+  725  cd httpd/
+  726  ll
+  727  vi httpd-tests.rb
+  728  kitchen destroy
+  729  kitchen create
+  730  ll
+  731  cd ..
+  732  ll
+  733  cd ..
+  734  ll
+  735  cd ..
+  736  ll
+  737  kitchen create
+  738  ll`
+  739  kitchen destroy
+  740  kitchen create
+  741  kitchen converge
+  742  kitchen verify
+  743  cat test/integration/httpd/httpd-tests.rb
+  744  vi test/integration/httpd/httpd-tests.rb
+  745  kitchen converge
+  746  kitchen verify
+  747  kitchen destroy
+  748  kitchen create
+  749  kitchen converge
+  750  kitchen verify
+  751  vi test/integration/httpd/httpd-tests.rb
+  752  kitchen converge
+  753  kitchen verify
+  754  vi test/integration/httpd/httpd-tests.rb
+  755  kitchen converge
+  756  kitchen verify
+  757  vi test/integration/httpd/httpd-tests.rb
+  758  kitchen converge
+  759  kitchen verify
+  760  ll
+  761  vi tasks/
+  762  vi tasks/main.yml
+  763  kitchen converge
+  764  cat /etc/httpd/conf/http.conf
+  765  ll
+  766  vi test/integration/httpd/httpd-tests.rb
+  767  ll
+  768  vi tasks/main.yml
+  769  kitchen converge
+  770  kitchen verify
+  771  kitchen list
+  772  docker destroy
+  773  ll
+  774  cat .kitchen.yml
+  775  ll
+  776  cd ..
+  777  ll
+  778  pwd
+  779  cd ..
+  780  ll
+  781  git clone http://gitlab.teradisk.net/trainings/lab-jenkins-devops.git
+  782  ll
+  783  cd ltree
+  784  tree
+  785  ansible-playbook crear-jenkins-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  786  ll
+  787  cd lab-jenkins-devops/
+  788  ansible-playbook crear-jenkins-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  789  ll
+  790  su centos
+  791  docker login
+  792  ll
+  793  docker build -t axlraul/test:imagen1
+  794  ll
+  795  cd files/
+  796  ll
+  797  cd ..
+  798  ll
+  799  docker build -t axlraul/test:imagen1
+  800  docker build -t axlraul/test:imagen1 .
+  801  ll
+  802  ll
+  803   docker push axlraul/test:imagen1
+  804  ll
+  805  ll
+  806  cat d2l2_custommodule.yml
+  807  cat dia3_lab1_jenkins.md
+  808  ll
+  809  yum install redis
+  810  redis -
+  811  redis -cli
+  812  redis
+  813  redis - cli
+  814  redis-cli
+  815  llk
+  816  ll
+  817  cat d1l1_configurar_nginx.yml
+  818  cp d1l1_configurar_nginx.yml docker-redis.yml
+  819  vi docker-redis.yml
+  820  cp d1l1_configurar_nginx.yml docker-redis.yml
+  821  ll
+  822  ansible-playbook docker-redis.yml
+  823  vi docker-redis.yml
+  824  ansible-playbook docker-redis.yml
+  825  vi docker-redis.yml
+  826  ansible-playbook docker-redis.yml
+  827  ansible-playbook docker-redis.yml
+  828  ansible-playbook docker-redis.yml
+  829  vi docker-redis.yml
+  830  ansible-playbook docker-redis.yml
+  831  vi docker-redis.yml
+  832  vi docker-redis.yml
+  833  ansible-playbook docker-redis.yml
+  834  vi docker-redis.yml
+  835  ll
+  836  cat crear-lab1vm.retry
+  837  cat crear-lab3vm.yml
+  838  vi docker-redis.yml
+  839  ansible-playbook docker-redis.yml
+  840  vi docker-redis.yml
+  841  ansible-playbook docker-redis.yml
+  842  ll
+  843  pip install docker-py
+  844  ansible-playbook docker-redis.yml
+  845  kk
+  846  ll
+  847  history | grep -i redis
+  848  redis-cli
+  849  vi docker-redis.yml
+  850  ansible-playbook docker-redis.yml
+  851  vi docker-redis.yml
+  852  ansible-playbook docker-redis.yml
+  853  redis-cli
+  854  vi docker-redis.yml
+  855  netstat -putona 6379
+  856  netstat -putona | grep -i 6379
+  857  ansible-playbook docker-redis.yml
+  858  vi docker-redis.yml
+  859  ansible-playbook docker-redis.yml
+  860  redis-cli
+  861  vi docker-redis.yml
+  862  ansible-playbook docker-redis.yml
+  863  redis-cli
+  864  ansible-playbook docker-redis.yml
+  865  vi docker-redis.yml
+  866  ansible-playbook docker-redis.yml
+  867  redis-cli
+  868  ansible-playbook docker-redis.yml
+  869  vi docker-redis.yml
+  870  ansible-playbook docker-redis.yml
+  871  redis-cli
+  872  vi docker-redis.yml
+  873  ansible-playbook docker-redis.yml
+  874  vi docker-redis.yml
+  875  ansible-playbook docker-redis.yml
+  876  ansible-playbook docker-redis.yml
+  877  redis-cli
+  878  vi docker-redis.yml
+  879  ansible-playbook docker-redis.yml
+  880  redis-cli
+  881  vi docker-redis.yml
+  882  redis-cli
+  883  ansible-playbook docker-redis.yml
+  884  redis-cli
+  885  redis-cli
+  886  docker ps -a
+  887  docker ps -a
+  888  docker exec -ti 38363f9e171e /bin/bash
+  889  docker exec -ti 9daa8db3f298 /bin/bash
+  890  ll
+  891  vi docker-redis.yml
+  892  ansible-playbook docker-redis.yml
+  893  docker ps -a
+  894  docker exec -ti a305c10aeec1 /bin/bash
+  895  ll
+  896  vi docker-redis.yml
+  897  ll
+  898  docker exec -ti a305c10aeec1 /bin/bash
+  899  vi docker-redis.yml
+  900  ansible-playbook docker-redis.yml
+  901  docker ps -a
+  902  docker exec -ti 8c0546038f5f /bin/bash
+  903  ll
+  904  ansible-playbook docker-redis.yml
+  905  redis-cli
+  906  vi docker-redis.yml
+  907  ansible-playbook docker-redis.yml
+  908  docker ps -a
+  909  redis-cli
+  910  vi docker-redis.yml
+  911  history
+  912  ansible-playbook crear-windows-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  913  ll
+  914  cd && git clone http://gitlab.teradisk.net/trainings/laboratorio-jenkins.git
+  915  ll
+  916  cd ..
+  917  ll
+  918  cd home/
+  919  ll
+  920  cd centos/
+  921  ll
+  922  cd curso-ansible-devops-diciembre/
+  923  ll
+  924  ansible-playbook crear-windows-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  925  cd lab-jenkins-devops
+  926  ll
+  927  ansible-playbook crear-windows-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  928  ll
+  929  cd ..
+  930  ll
+  931  cp env_vars/aws_vault.yml lab-jenkins-devops/env_vars/
+  932  ansible-playbook crear-windows-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  933  ll
+  934  cd lab-jenkins-devops/
+  935  ansible-playbook crear-windows-aws.yml -e "NOMBRE_ALUMNO=Raul"
+  936  ll
+  937  cd ..
+  938  ll
+  939  ll cd env_vars/
+  940  ll
+  941  cd env_vars/
+  942  ll
+  943  mv aws_vault.yml /tmp
+  944  ll
+  945  cd ..
+  946  ll
+  947  updatedb
+  948  locate awsll
+  949  locate aws_
+  950  ll
+  951  cd /tmp/
+  952  ll
+  953  ll
+  954  cd ..
+  955  ll
+  956  locate aws_vault.yml
+  957  ll
+  958  locate aws_vault.yml
+  959  mv /home/centos/curso-ansible-devops-diciembre/lab-jenkins-devops/env_vars/aws_vault.yml /tmp
+  960  mv /root/laboratorio-jenkins/env_vars/aws_vault.yml /tmp
+  961  locate aws_vault.yml
+  962  updatedb
+  963  locate aws_vault.yml
+  964  mv /home/centos/curso-ansible-devops-diciembre/repotest/ansible-3/env_vars/aws_vault.yml /tmp
+  965  updatedb
+  966  locate aws_vault.yml
+  967  ll
+  968  cd /home/centos/curso-ansible-devops-diciembre/
+  969  ll
+  970  git clone https://github.com/axlraul/invdinamicday4.git
+  971  ll
+  972  cp * invdinamicday4/
+  973  cp  -p * invdinamicday4/
+  974  cp  -fp * invdinamicday4/
+  975  ll
+  976  cd invdinamicday4/
+  977  rm *.*
+  978  rm -Rf *.*
+  979  ll
+  980  ll
+  981  rm Dockerfile
+  982  ll
+  983  rm 1
+  984  ll
+  985   cd..
+  986  cd ..
+  987  git clone https://github.com/axlraul/invdinamicday4.git
+  988  ll
+  989  cd invdinamicday4/
+  990  ll
+  991  cd ..
+  992  cp -Rp * invdinamicday4/
+  993  ll
+  994  cd invdinamicday4/
+  995  git init .
+  996  git add *
+  997  git status
+  998  git add *
+  999  git commit -m "push inicial dia 4"
+ 1000  git remote add origin https://github.com/axlraul/invdinamicday4
+ 1001  git push -u origin master
+ 1002  ll
+ 1003  pwd
+ 1004  history
+ 1005  ll
+ 1006  locate env
+ 1007  locate env_vars
+ 1008  locate env_vars
+ 1009  cp -p /tmp/aws_vault.yml /home/centos/curso-ansible-devops-diciembre/env_vars
+ 1010  cp -p /tmp/aws_vault.yml
+ 1011  cp -p /tmp/aws_vault.yml /home/centos/curso-ansible-devops-diciembre/lab-jenkins-devops
+ 1012  locate aws_vault
+ 1013  updatedb
+ 1014  locate aws_vault
+ 1015  history > /tmp/history.txt
