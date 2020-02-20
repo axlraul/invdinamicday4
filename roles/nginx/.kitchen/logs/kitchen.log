@@ -1,0 +1,3 @@
+I, [2020-02-19T10:30:18.012761 #7829]  INFO -- Kitchen: -----> Starting Kitchen (v1.20.0)
+I, [2020-02-19T10:30:19.148963 #7829]  INFO -- Kitchen: -----> Destroying <nginx-centos-7>...
+I, [2020-02-19T10:30:21.232213 #7829]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.22s)

@@ -1,0 +1,17 @@
+- name: instalar apache
+  hosts: www
+  become: True
+  roles:
+    - httpd
+  tags: www
+
+- name: desplegar config apache puerto 80 
+  hosts: www
+  become: True
+  tasks:
+    - name: copiar página de bienvenida
+      template:
+        src: templates/index.html.j2
+        dest: /usr/share/nginx/html/index.html
+  tags: www
+

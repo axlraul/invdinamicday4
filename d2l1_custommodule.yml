@@ -1,0 +1,24 @@
+---
+- name: instalar redis
+  hosts: www
+  become: True
+  roles:
+    - redis
+
+- name: modificacion redis
+  hosts: www
+  become: True
+  tasks:
+    - name: copiar redis.conf 
+      template:
+        src: templates/redis.conf.j2
+        dest: /etc/redis.conf
+ 
+
+
+#- name: modifying redit.conf
+#  hosts: www
+#  become: True
+#  roles:
+#    - laboratorio-redis
+

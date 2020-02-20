@@ -1,0 +1,13 @@
+- name: instalar paquete redis
+  yum:
+    name: "redis"
+    state: present
+- name: habilitar servicio redis
+  systemd:
+    name: redis
+    enabled: yes
+- name: arrancar redis
+  service:
+    name: redis
+    state: started
+

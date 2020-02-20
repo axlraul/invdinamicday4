@@ -1,0 +1,13 @@
+- name: instalar paquete mariadb
+  yum:
+    name: "mariadb-server"
+    state: present
+- name: habilitar servicio mariadb
+  systemd:
+    name: mariadb
+    enabled: yes
+- name: arrancar mariadb
+  service:
+    name: mariadb
+    state: started
+

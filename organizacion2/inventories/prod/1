@@ -1,0 +1,10 @@
+[www]
+34.240.57.148
+[bbdd]
+34.241.50.217
+
+[all:vars]
+ansible_user=centos
+ansible_private_key_file=/root/curso-itnow.pem
+ansible_host_key_checking=false
+

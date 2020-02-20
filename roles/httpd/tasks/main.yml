@@ -1,0 +1,15 @@
+---
+- name: instalar paquete httpd
+  yum:
+    name: "httpd"
+    state: present
+
+- name: arrancar httpd
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+- name: cambiar permisos a 777 de /etc/httpd/conf/httpd.conf
+  file:
+    path: /etc/httpd/conf/httpd.conf
+    mode: '0777'

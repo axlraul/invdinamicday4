@@ -1,0 +1,20 @@
+---
+
+
+- name: Create data container
+  hosts: 127.0.0.1
+  become: true
+  tasks:
+   - name: Create a data container
+     docker_container:
+      name: redis
+      image: redis
+      recreate: yes
+#      expose:
+#        - 6379
+#      ports:
+#        - 6379:6379
+#      published_ports:
+#        - 127.0.0.1:6379:6379
+      volumes:
+        - /tmp:/tmp

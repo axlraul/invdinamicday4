@@ -1,0 +1,8 @@
+---
+- name: probar custommodule 
+  hosts: 127.0.0.1
+  become: True
+  roles:
+    - laboratorio-custommodule
+
+
